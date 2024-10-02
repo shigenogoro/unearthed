@@ -17,6 +17,11 @@ app.get('/', (req, res) => {
     res.status(200).send('<h1 style="text-align-center; margin-top: 50px;" >UnEarthed API</h1>')
 })
 
+// 404 Error
+app.get('*', (req, res) => {
+    res.status(404).send('404 Page Not Found');
+})
+
 /**
  * Start a server on port process.env.PORT or 3001
  */
