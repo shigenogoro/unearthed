@@ -1,5 +1,5 @@
 import express from 'express'
-import giftsRouter from './routes/gifts'
+import giftsRouter from './routes/gifts.js'
 
 const app = express()
 
@@ -20,7 +20,7 @@ app.get('/', (req, res) => {
 /**
  * Start a server on port process.env.PORT or 3001
  */
-const PORT = 3001
+const PORT = process.env.PORT || 3001
 app.listen(PORT, () => {
     console.log(`Server is listening on http://localhost:${PORT}`)
 })
