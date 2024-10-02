@@ -2,6 +2,8 @@ const renderGifts = async () => {
     const response = await fetch('/gifts')
     const data = await response.json()
 
+    console.log(data)
+
     const mainContent = document.querySelector('#main-content')
 
     if(data) {
