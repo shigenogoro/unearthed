@@ -10,7 +10,4 @@ const config = {
     database: process.env.PGDATABASE
 }
 
-console.log(config.password)
-console.log(typeof config.password)
-
 export const pool = new pg.Pool(config)
