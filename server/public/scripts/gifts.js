@@ -54,4 +54,13 @@ const renderGifts = async () => {
     }
 }
 
-renderGifts()
+// 404 Checking
+const requestedURL = window.location.href.split('/').pop()
+console.log(requestedURL)
+
+if(requestedURL) {
+    // requestedURL is not null indicate that it is not for the home page
+    window.location.href = '../404.html'
+} else {
+    renderGifts()
+}
