@@ -11,12 +11,15 @@ const App = () => {
   
   const [gifts, setGifts] = useState([]);
 
+  const fetchGifts = async () => {
+    const response = await fetch('http://localhost:3001/gifts')
+    const data = await response.json()
+    setGifts(data)
+  }
 
   useEffect(() => {
-
-  
-    
-
+    // Call the fetchGifts function
+    fetchGifts();
   }, []);
 
 
